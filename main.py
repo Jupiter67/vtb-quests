@@ -4,13 +4,13 @@ from hypercorn.asyncio import serve, Config
 from fastapi import FastAPI
 import uvloop
 
-from app.api import router
+from app.api.quest_api import quest_router
 from settings import Settings
 
 
 settings = Settings()
 app = FastAPI()
-app.include_router(router)
+app.include_router(quest_router)
 
 
 if __name__ == '__main__':
