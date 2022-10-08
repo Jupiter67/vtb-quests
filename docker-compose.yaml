@@ -11,7 +11,7 @@ services:
     environment:
       - PYTHONUNBUFFERED=1
     ports:
-      - 8000:8000
+      - 8091:8091
     networks:
       - bridge-network
     depends_on:
