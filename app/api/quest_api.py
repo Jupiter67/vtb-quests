@@ -6,13 +6,12 @@ from datetime import datetime
 from typing import List
 
 from fastapi import APIRouter
-from fastapi.exceptions import HTTPException
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.db import SessionLocal
 from app.models import Quest as ORMQuest, UserQuest as ORMUserQuest
-from app.types.quest_types import QuestInput, Quest, QuestReturn
+from app.types.quest_types import QuestInput, Quest
 
 
 quest_router = APIRouter(prefix='/api/quest')
