@@ -16,7 +16,7 @@ class Quest(Base):
     id = Column(Integer, primary_key=True)
     title = Column(String, nullable=False)
     description = Column(String)
-    date_created = Column(TIMESTAMP, default=datetime.utcnow())
+    date_started = Column(TIMESTAMP, default=datetime.utcnow())
     date_finished = Column(TIMESTAMP)
 
     assigned_users = relationship('UserQuest')

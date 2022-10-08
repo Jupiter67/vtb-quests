@@ -1,8 +1,8 @@
 """quest and user_quest relation tables
 
-Revision ID: df5736b60c58
+Revision ID: a97ec9e63112
 Revises: 
-Create Date: 2022-10-08 21:34:46.903812
+Create Date: 2022-10-08 21:48:19.622801
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'df5736b60c58'
+revision = 'a97ec9e63112'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -22,7 +22,7 @@ def upgrade() -> None:
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('title', sa.String(), nullable=False),
     sa.Column('description', sa.String(), nullable=True),
-    sa.Column('date_created', sa.TIMESTAMP(), nullable=True),
+    sa.Column('date_started', sa.TIMESTAMP(), nullable=True),
     sa.Column('date_finished', sa.TIMESTAMP(), nullable=True),
     sa.PrimaryKeyConstraint('id')
     )
